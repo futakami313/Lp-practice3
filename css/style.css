@@ -33,7 +33,7 @@ li {
 }
 
 .inner{
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0% 5%;
 }
@@ -44,6 +44,7 @@ li {
 #header {
   width: 100%;
   height: 100vh;
+  margin: 0 auto;
   background-image: url("../img/mainvisual.jpg");
   background-size: cover;
   background-position: center top;
@@ -78,9 +79,11 @@ li {
 
 
 .image-box{
-  width: 1200px;
+  width: 100%;
   display: flex;
   margin: 0 auto;
+  justify-content: center; /* 子要素を水平方向に中央揃え */
+  align-items: center; /* 子要素を垂直方向に中央揃え */
 }
 
 .ar-ne-a{
@@ -116,6 +119,7 @@ li {
 /*fashion*/
 
 #fashion{
+  width: 100%;
   height: 520px;
   background-image: url(../img/fashion.jpg);
   background-size: cover;
@@ -178,6 +182,7 @@ li {
 /*footer*/
 
 #footer{
+  width: 100%;
   background-color: #333;
 }
 
@@ -207,4 +212,18 @@ li {
   background-color: #fff;
   padding: 20px;
   text-align: center;
+}
+
+@media screen and (max-width: 896px) {
+  .inner{
+    max-width: 97%;
+  }
+  .image-box,.catalog,.antique,.flex-box{
+    flex-direction: column;
+    width: 100%;
+  }
+  .ar-ne-a,.catalog-box,.footer-box{
+    width: 100%;
+    margin: 0 auto;
+  }
 }
